@@ -41,7 +41,6 @@
       cursor: none;
     }
 
-    /* ── Crosshair cursor ── */
     #cursor {
       position: fixed;
       width: 28px;
@@ -51,7 +50,6 @@
       transform: translate(-50%, -50%);
       transition: width .15s, height .15s, opacity .2s;
     }
-    /* Four crosshair arms */
     #cursor::before,
     #cursor::after {
       content: '';
@@ -59,19 +57,17 @@
       background: var(--cyan);
       box-shadow: 0 0 6px var(--cyan);
     }
-    /* horizontal bar */
     #cursor::before {
       width: 100%; height: 1px;
       top: 50%; left: 0;
       transform: translateY(-50%);
     }
-    /* vertical bar */
     #cursor::after {
       width: 1px; height: 100%;
       left: 50%; top: 0;
       transform: translateX(-50%);
     }
-    /* center dot */
+    
     #cursor-dot {
       position: fixed;
       width: 4px; height: 4px;
@@ -82,7 +78,7 @@
       transform: translate(-50%, -50%);
       box-shadow: 0 0 8px var(--cyan);
     }
-    /* corner brackets ring */
+  
     #cursor-ring {
       position: fixed;
       width: 44px;
@@ -128,13 +124,13 @@
       bottom: 0; right: 0;
       border-width: 0 1.5px 1.5px 0;
     }
-    /* pointer state — expand brackets */
+    
     #cursor.is-pointer { width: 20px; height: 20px; }
     #cursor-ring.is-pointer {
       width: 56px; height: 56px;
       border-color: rgba(0,245,255,.9);
     }
-    /* text state — slim crosshair */
+    
     #cursor.is-text { opacity: .4; }
     #cursor-ring.is-text { opacity: .5; }
 
@@ -240,7 +236,6 @@
       gap: .75rem;
     }
 
-    /* Typewriter blink cursor on eyebrow */
     .hero-eyebrow .blink {
       display: inline-block;
       width: 2px;
@@ -1492,7 +1487,7 @@
             <div class="avatar-ring"></div>
             <div class="avatar-ring2"></div>
             <div class="avatar-circle">
-              <!-- Personalized Tech Avatar — Srinivas: curly dark hair, slim face, thin beard, gold-frame glasses -->
+            
               <svg class="avatar-svg" viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <radialGradient id="bgG" cx="50%" cy="60%" r="70%">
@@ -1530,10 +1525,10 @@
                   <clipPath id="cc"><circle cx="160" cy="160" r="158"/></clipPath>
                 </defs>
 
-                <!-- BG -->
+               
                 <circle cx="160" cy="160" r="160" fill="url(#bgG)"/>
 
-                <!-- Subtle hex grid -->
+              
                 <g stroke="rgba(0,245,255,0.05)" stroke-width="0.7" clip-path="url(#cc)">
                   <line x1="0" y1="64" x2="320" y2="64"/>  <line x1="0" y1="128" x2="320" y2="128"/>
                   <line x1="0" y1="192" x2="320" y2="192"/> <line x1="0" y1="256" x2="320" y2="256"/>
@@ -1541,151 +1536,140 @@
                   <line x1="192" y1="0" x2="192" y2="320"/> <line x1="256" y1="0" x2="256" y2="320"/>
                 </g>
 
-                <!-- ── BODY / HOODIE ── -->
-                <!-- Hoodie body — dark navy, wide shoulders -->
+              
                 <ellipse cx="160" cy="318" rx="118" ry="72" fill="#0e2540"/>
-                <!-- Hoodie highlight -->
+                
                 <ellipse cx="160" cy="305" rx="95" ry="55" fill="#122d4e" opacity="0.6"/>
-                <!-- Hoodie drawstring cords -->
+               
                 <path d="M148,268 Q144,285 140,310" stroke="#1e4a78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                 <path d="M172,268 Q176,285 180,310" stroke="#1e4a78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <!-- Hood collar opening -->
+                
                 <path d="M128,262 Q160,280 192,262 Q178,255 160,258 Q142,255 128,262 Z" fill="#0d2440"/>
-                <!-- Inner hood visible -->
+              
                 <path d="M132,264 Q160,276 188,264 Q178,260 160,262 Q142,260 132,264 Z" fill="#0a1d32"/>
 
-                <!-- Neck -->
                 <path d="M143,222 Q143,250 148,260 Q160,265 172,260 Q177,250 177,222 Z" fill="url(#skinG2)"/>
-                <!-- Neck shadow -->
+               
                 <path d="M148,240 Q160,248 172,240 Q168,252 160,255 Q152,252 148,240 Z" fill="#7a3f1a" opacity="0.4"/>
 
-                <!-- ── HEAD ── -->
-                <!-- Head base — slightly oval, slim face -->
+                
                 <ellipse cx="160" cy="166" rx="70" ry="84" fill="url(#skinG)" filter="url(#softShadow)"/>
-                <!-- Cheek shadows for depth -->
+                
                 <ellipse cx="108" cy="178" rx="18" ry="22" fill="#8a4520" opacity="0.18"/>
                 <ellipse cx="212" cy="178" rx="18" ry="22" fill="#8a4520" opacity="0.18"/>
-                <!-- Forehead highlight -->
+               
                 <ellipse cx="160" cy="120" rx="36" ry="22" fill="#d4906a" opacity="0.22"/>
 
-                <!-- ── EARS ── -->
+               
                 <ellipse cx="90" cy="170" rx="11" ry="15" fill="#b07040"/>
                 <ellipse cx="230" cy="170" rx="11" ry="15" fill="#b07040"/>
                 <ellipse cx="90" cy="170" rx="6" ry="9" fill="#9a5c30"/>
                 <ellipse cx="230" cy="170" rx="6" ry="9" fill="#9a5c30"/>
 
-                <!-- ── CURLY / WAVY HAIR ── -->
-                <!-- Main hair mass — big, voluminous, slightly asymmetric -->
+                
                 <path d="M95,155 Q88,110 95,85 Q108,55 140,45 Q160,40 178,47 Q210,58 222,88 Q230,110 225,155
                          Q215,100 205,82 Q192,62 170,55 Q160,52 148,56 Q126,64 114,86 Q102,106 95,155 Z"
                       fill="url(#hairG)"/>
-                <!-- Curly texture bumps on top -->
+                
                 <path d="M110,82 Q118,68 128,72 Q122,78 118,88 Z" fill="#1e1530"/>
                 <path d="M128,62 Q138,50 150,54 Q144,62 140,72 Z" fill="#231a38"/>
                 <path d="M152,48 Q162,40 172,45 Q166,54 162,64 Z" fill="#1e1530"/>
                 <path d="M173,52 Q183,46 192,54 Q186,62 180,70 Z" fill="#231a38"/>
                 <path d="M192,66 Q200,58 208,68 Q203,76 198,82 Z" fill="#1e1530"/>
-                <!-- Side hair curls -->
+               
                 <path d="M94,130 Q86,118 90,108 Q96,96 104,98 Q96,108 94,122 Z" fill="#190f2a"/>
                 <path d="M226,130 Q234,118 230,108 Q224,96 216,98 Q224,108 226,122 Z" fill="#190f2a"/>
-                <!-- Hair falling over forehead slightly -->
+               
                 <path d="M118,82 Q128,74 140,78 Q130,84 124,92 Z" fill="#130e20" opacity="0.8"/>
                 <path d="M168,72 Q178,66 190,72 Q182,80 176,88 Z" fill="#130e20" opacity="0.8"/>
-                <!-- Top hair wisps -->
+               
                 <path d="M140,50 Q148,38 158,42 Q150,52 146,62 Z" fill="#1a1128" opacity="0.9"/>
                 <path d="M162,44 Q170,34 180,40 Q172,50 168,60 Z" fill="#1a1128" opacity="0.9"/>
 
-                <!-- ── EYEBROWS — thin, arched ── -->
+               
                 <path d="M114,130 Q128,122 143,126" stroke="#1a0f08" stroke-width="3" fill="none" stroke-linecap="round"/>
                 <path d="M177,126 Q192,122 206,130" stroke="#1a0f08" stroke-width="3" fill="none" stroke-linecap="round"/>
-                <!-- Eyebrow highlight -->
+                
                 <path d="M116,130 Q129,124 142,127" stroke="#2e1c0f" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
                 <path d="M178,127 Q191,124 205,130" stroke="#2e1c0f" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
 
-                <!-- ── EYES ── -->
-                <!-- Left eye whites -->
+               
                 <ellipse cx="130" cy="152" rx="18" ry="12" fill="#f0ece4"/>
-                <!-- Left iris -->
+               
                 <ellipse cx="130" cy="153" rx="10" ry="10" fill="#2a1a0a"/>
                 <ellipse cx="130" cy="153" rx="7" ry="7" fill="#180f04"/>
-                <!-- Left pupil highlight -->
+               
                 <circle cx="134" cy="149" r="2.5" fill="white" opacity="0.95"/>
                 <circle cx="127" cy="155" r="1.2" fill="white" opacity="0.4"/>
-                <!-- Left eyelid crease -->
+                
                 <path d="M112,152 Q130,143 148,152" stroke="#7a4820" stroke-width="1" fill="none" opacity="0.5"/>
-                <!-- Left lower lid -->
+               
                 <path d="M113,154 Q130,162 147,154" stroke="#9a5830" stroke-width="0.7" fill="none" opacity="0.3"/>
 
-                <!-- Right eye whites -->
+               
                 <ellipse cx="190" cy="152" rx="18" ry="12" fill="#f0ece4"/>
-                <!-- Right iris -->
+              
                 <ellipse cx="190" cy="153" rx="10" ry="10" fill="#2a1a0a"/>
                 <ellipse cx="190" cy="153" rx="7" ry="7" fill="#180f04"/>
-                <!-- Right pupil highlight -->
+                
                 <circle cx="194" cy="149" r="2.5" fill="white" opacity="0.95"/>
                 <circle cx="187" cy="155" r="1.2" fill="white" opacity="0.4"/>
-                <!-- Right eyelid crease -->
+                
                 <path d="M172,152 Q190,143 208,152" stroke="#7a4820" stroke-width="1" fill="none" opacity="0.5"/>
-                <!-- Right lower lid -->
+                
                 <path d="M173,154 Q190,162 207,154" stroke="#9a5830" stroke-width="0.7" fill="none" opacity="0.3"/>
 
-                <!-- ── GLASSES — gold/silver thin frames (like photo) ── -->
-                <!-- Left lens frame -->
+              
                 <rect x="108" y="141" width="44" height="26" rx="7" fill="rgba(0,245,255,0.04)" stroke="#c8a84a" stroke-width="1.8"/>
-                <!-- Right lens frame -->
+                
                 <rect x="168" y="141" width="44" height="26" rx="7" fill="rgba(0,245,255,0.04)" stroke="#c8a84a" stroke-width="1.8"/>
-                <!-- Bridge -->
+               
                 <path d="M152,154 Q160,150 168,154" stroke="#c8a84a" stroke-width="1.8" fill="none"/>
-                <!-- Temple arms -->
+                
                 <line x1="108" y1="154" x2="90" y2="158" stroke="#c8a84a" stroke-width="1.5"/>
                 <line x1="212" y1="154" x2="230" y2="158" stroke="#c8a84a" stroke-width="1.5"/>
-                <!-- Subtle lens tint -->
+                
                 <rect x="109" y="142" width="42" height="24" rx="6" fill="rgba(0,245,255,0.03)"/>
                 <rect x="169" y="142" width="42" height="24" rx="6" fill="rgba(0,245,255,0.03)"/>
-                <!-- Glasses glow highlight -->
+               
                 <rect x="108" y="141" width="44" height="26" rx="7" fill="none" stroke="#00f5ff" stroke-width="0.5" opacity="0.4"/>
                 <rect x="168" y="141" width="44" height="26" rx="7" fill="none" stroke="#00f5ff" stroke-width="0.5" opacity="0.4"/>
 
-                <!-- ── NOSE ── slim, triangular -->
+               
                 <path d="M157,172 Q154,188 150,193 Q158,197 170,193 Q166,188 163,172 Z" fill="#9a5830" opacity="0.55"/>
-                <!-- Nostril dots -->
+                
                 <ellipse cx="152" cy="193" rx="5" ry="3.5" fill="#7a3f18" opacity="0.6"/>
                 <ellipse cx="168" cy="193" rx="5" ry="3.5" fill="#7a3f18" opacity="0.6"/>
 
-                <!-- ── MOUTH — relaxed, slight upward curve ── -->
+                
                 <path d="M144,210 Q160,220 176,210" stroke="#7a3f18" stroke-width="2" fill="none" stroke-linecap="round"/>
-                <!-- Upper lip -->
+                
                 <path d="M144,210 Q152,206 160,208 Q168,206 176,210" stroke="#8a4820" stroke-width="1.2" fill="none"/>
-                <!-- Lip fill -->
+               
                 <path d="M147,211 Q160,217 173,211 Q168,214 160,215 Q152,214 147,211 Z" fill="#b06040" opacity="0.35"/>
 
-                <!-- ── FACIAL HAIR — thin mustache + minimal beard ── -->
-                <!-- Mustache — thin -->
+               
                 <path d="M148,203 Q155,200 160,202 Q165,200 172,203 Q165,207 160,205 Q155,207 148,203 Z" fill="#1a0f08" opacity="0.75"/>
-                <!-- Chin beard patch (light) -->
+                
                 <path d="M152,220 Q160,228 168,220 Q164,225 160,227 Q156,225 152,220 Z" fill="#1a0f08" opacity="0.45"/>
-                <!-- Jaw stubble lines -->
+                
                 <path d="M118,195 Q114,205 116,215" stroke="#5a3010" stroke-width="0.8" fill="none" opacity="0.3"/>
                 <path d="M202,195 Q206,205 204,215" stroke="#5a3010" stroke-width="0.8" fill="none" opacity="0.3"/>
 
-                <!-- ── TECH OVERLAYS ── -->
-                <!-- HUD scan line -->
                 <rect x="2" y="160" width="316" height="1" fill="url(#scanG)" opacity="0.6"/>
-                <!-- Corner brackets (HUD reticle) -->
                 <g stroke="#00f5ff" stroke-width="1.2" fill="none" opacity="0.5" filter="url(#glow2)">
                   <path d="M22,22 L22,38 M22,22 L38,22"/>
                   <path d="M298,22 L298,38 M298,22 L282,22"/>
                   <path d="M22,298 L22,282 M22,298 L38,298"/>
                   <path d="M298,298 L298,282 M298,298 L282,298"/>
                 </g>
-                <!-- Floating code labels -->
                 <g font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#00f5ff" opacity="0.5" filter="url(#glow2)">
                   <text x="24" y="58">&lt;dev/&gt;</text>
                   <text x="268" y="58">ML</text>
                   <text x="24" y="280">{AI}</text>
                   <text x="260" y="280">CSE</text>
                 </g>
-                <!-- Tiny circuit dots -->
+                
                 <circle cx="62" cy="62" r="1.8" fill="#00f5ff" opacity="0.6"/>
                 <circle cx="258" cy="62" r="1.8" fill="#a855f7" opacity="0.6"/>
                 <circle cx="62" cy="258" r="1.8" fill="#a855f7" opacity="0.6"/>
